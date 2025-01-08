@@ -104,9 +104,16 @@ export default function Navbar() {
             )}
             {user && (
               <li>
-                <span className="block py-2 px-3 font-bold text-black rounded md:p-0 text-lg">
+                <Link
+                  href="/profile"
+                  className={`block py-2 px-3 rounded md:p-0 text-lg font-bold ${
+                    pathname === "/profile"
+                      ? "underline"
+                      : "text-black hover:underline"
+                  }`}
+                >
                   {user.displayName}
-                </span>
+                </Link>
               </li>
             )}
             <li></li>
