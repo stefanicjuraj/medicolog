@@ -13,7 +13,14 @@ const Logout: React.FC = () => {
     }
   };
 
-  return <button onClick={handleLogout}>Logout</button>;
+  return (
+    <button
+      onClick={handleLogout}
+      className="px-7 py-4 bg-blue-300 border border-b-4 border-black border-r-4 rounded hover:shadow-lg"
+    >
+      Logout
+    </button>
+  );
 };
 
 export default Logout;
