@@ -284,7 +284,7 @@ const AddAllergyModal: React.FC<AddAllergyModalProps> = ({
           {step > 0 && (
             <button
               onClick={handlePreviousStep}
-              className="px-4 py-2 text-lg bg-gray-100 font-bold border border-b-4 border-black border-r-4 rounded hover:shadow-lg"
+              className="px-4 py-4 text-lg bg-gray-100 font-bold border border-b-4 border-black border-r-4 rounded hover:shadow-lg my-4"
             >
               ⬅ Previous
             </button>
@@ -293,7 +293,7 @@ const AddAllergyModal: React.FC<AddAllergyModalProps> = ({
             ? (
               <button
                 onClick={handleNextStep}
-                className="px-8 py-2 text-lg bg-blue-300 font-bold border border-b-4 border-black border-r-4 rounded hover:shadow-lg"
+                className="px-8 py-4 text-lg bg-blue-300 font-bold border border-b-4 border-black border-r-4 rounded hover:shadow-lg my-4"
               >
                 Next ⮕
               </button>
@@ -301,7 +301,7 @@ const AddAllergyModal: React.FC<AddAllergyModalProps> = ({
             : (
               <button
                 onClick={handleAddRecord}
-                className="px-8 py-2 text-lg bg-green-300 font-bold border border-b-4 border-black border-r-4 rounded hover:shadow-lg"
+                className="px-8 py-4 text-lg bg-blue-300 font-bold border border-b-4 border-black border-r-4 rounded hover:shadow-lg my-4"
               >
                 Submit
               </button>
