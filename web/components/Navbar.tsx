@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import useAuth from "../auth/useAuth";
@@ -5,6 +6,16 @@ import useAuth from "../auth/useAuth";
 export default function Navbar() {
   const pathname = usePathname();
   const { user } = useAuth();
+  const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    setIsOpen(false);
+  }, [pathname]);
+
+  const toggleMenu = () => {
+    setIsOpen((prev) => !prev);
+  };
+
   return (
     <nav className="bg-blue-300 sticky top-0 z-50 m-4 border-black border-r-2 border-l-2 border-b-8 border-t-2 rounded max-w-screen-lg mx-auto">
       <div className="flex flex-wrap items-center justify-between mx-auto p-5">
@@ -23,11 +34,11 @@ export default function Navbar() {
             </span>
           )}
           <button
-            data-collapse-toggle="navbar"
             type="button"
-            className="inline-flex items-center p-2 w-10 h-10 justify-center rounded-lg md:hidden"
+            onClick={toggleMenu}
+            className="inline-flex items-center p-2 w-10 h-10 justify-center rounded-lg md:hidden focus:outline-none focus:ring-2 focus:ring-gray-200"
             aria-controls="navbar"
-            aria-expanded="false"
+            aria-expanded={isOpen}
           >
             <svg
               className="w-5 h-5"
@@ -46,7 +57,10 @@ export default function Navbar() {
             </svg>
           </button>
         </div>
-        <div className="hidden w-full md:block md:w-auto" id="navbar">
+        <div
+          className={`${isOpen ? "block" : "hidden"} w-full md:block md:w-auto`}
+          id="navbar"
+        >
           <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0">
             <li>
               <Link
