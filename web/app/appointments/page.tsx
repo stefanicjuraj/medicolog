@@ -219,7 +219,7 @@ const Appointments = () => {
       <div>
         <Navbar />
         <div className="p-4 max-w-screen-lg mx-auto">
-          <h1 className="text-5xl font-black">My Appointments</h1>
+          <h1 className="text-5xl font-bold">My Appointments</h1>
           <p className="text-black mt-8">
             Please log in to view your appointments.
           </p>

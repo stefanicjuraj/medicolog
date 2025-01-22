@@ -212,7 +212,7 @@ const Records = () => {
       <div>
         <Navbar />
         <div className="p-4 max-w-screen-lg mx-auto">
-          <h1 className="text-5xl font-black">My Medical Records</h1>
+          <h1 className="text-5xl font-bold">My Medical Records</h1>
           <p className="text-black mt-8">
             Please log in to view your medical records.
           </p>
