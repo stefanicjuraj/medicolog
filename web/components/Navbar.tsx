@@ -23,9 +23,9 @@ export default function Navbar() {
           href="/"
           className="flex items-center space-x-3 rtl:space-x-reverse"
         >
-          <span className="self-center text-black sm:text-3xl text-2xl font-black whitespace-nowrap">
+          <h1 className="self-center text-black sm:text-3xl text-2xl font-black whitespace-nowrap">
             Medicolog
-          </span>
+          </h1>
         </Link>
         <div className="flex items-center space-x-2">
           {user && (
