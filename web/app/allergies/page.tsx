@@ -360,9 +360,6 @@ const Allergies = () => {
                         </h3>
                       </div>
                     )}
-                    <p className="text-sm mt-2">
-                      {allergy.createdAt.toDate().toLocaleDateString()}
-                    </p>
                   </div>
                 </div>
               ))
